@@ -119,6 +119,14 @@ The Docker image for this service is automatically built and published to Docker
 - `latest` - Built from the main branch
 - `vx.x.x` - Built from version tags (e.g., v1.0.0)
 
+### Multi-Architecture Support
+
+The Docker images are built for multiple architectures:
+- `linux/amd64` (x86_64) - For standard Intel/AMD servers and PCs
+- `linux/arm64` (ARM64) - For ARM-based servers and Apple Silicon Macs
+
+This allows you to run the container on a wide range of hardware without compatibility issues.
+
 ### GitHub Actions Workflow
 
 The repository includes a GitHub Actions workflow that:
