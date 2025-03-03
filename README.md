@@ -116,8 +116,11 @@ The Docker image for this service is automatically built and published to Docker
 
 ### Image Tags
 
-- `latest` - Built from the main branch
-- `vx.x.x` - Built from version tags (e.g., v1.0.0)
+The Docker images use a simple tagging strategy:
+- `latest` - Only built from the main branch
+- `vx.x.x` - Only built from version tags (e.g., v1.0.0)
+
+No other tags are created automatically.
 
 ### Multi-Architecture Support
 
