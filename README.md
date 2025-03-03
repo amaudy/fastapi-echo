@@ -128,13 +128,17 @@ The repository includes a GitHub Actions workflow that:
 
 ### Required Secrets
 
-To enable the GitHub Actions workflow to push to Docker Hub, you need to set up:
+To enable the GitHub Actions workflow to push to Docker Hub, you need to set up a GitHub Environment:
 
-1. Environment variable:
-   - `DOCKER_HUB_USERNAME`: Your Docker Hub username
+1. Go to your GitHub repository → Settings → Environments
+2. Create a new environment named "dev"
+3. Add the following:
+   - Environment variable:
+     - `DOCKER_HUB_USERNAME`: Your Docker Hub username
+   - Environment secret:
+     - `DOCKER_HUB_TOKEN`: Your Docker Hub access token (not your password)
 
-2. GitHub secret:
-   - `DOCKER_HUB_TOKEN`: Your Docker Hub access token (not your password)
+The workflow is configured to use the "dev" environment to access these values.
 
 #### Creating a Docker Hub Access Token
 
